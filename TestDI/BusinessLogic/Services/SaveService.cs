@@ -8,7 +8,7 @@ namespace TestDI.BusinessLogic.Services
 {
     public class SaveService : ISaveService
     {
-        public EmployersRepo employersRepo { get; set; }
+        public EmployersRepo employersRepo;
         public SaveService(EmployersRepo employersRepo)
         {
             this.employersRepo = employersRepo;

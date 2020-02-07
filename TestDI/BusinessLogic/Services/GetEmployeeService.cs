@@ -9,7 +9,7 @@ namespace TestDI.BusinessLogic.Services
 {
     public class GetEmployeeService : IGetEmployeeService
     {
-        public EmployersRepo employersRepo { get; set; }
+        public EmployersRepo employersRepo;
         public GetEmployeeService(EmployersRepo employersRepo)
         {
             this.employersRepo = employersRepo;
