@@ -9,8 +9,8 @@ namespace TestDI.Controllers
 {
     public class EmployeeController : Controller
     {
-        public SaveService saveService { get; set; }
-        public GetEmployeeService employeeService { get; set; }
+        public SaveService saveService;
+        public GetEmployeeService employeeService;
         public EmployeeController(SaveService saveService, GetEmployeeService employeeService)
         {
             this.saveService = saveService;
@@ -20,6 +20,11 @@ namespace TestDI.Controllers
         public void Save()
         {
             saveService.Save();
+        }
+
+        public void GetUser()
+        {
+            var result = employeeService.GetEmployee(3);
         }
     }
 }
